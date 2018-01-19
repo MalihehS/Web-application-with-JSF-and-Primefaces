@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      >
+    <h:head>
+        <title>Pet Cat Care</title>
+        <h:outputStylesheet name="css/cssLayout.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true" >
+            <p:layoutUnit position="north" size="70" >
+
+                <font color="black"><b> Welcome to our beautiful, full of love and understanding - Pet Cat Care. 
+                        ** Maliheh ** Emma ** Mariam ** Julijana</b></font>
+            </p:layoutUnit>
+            <p:layoutUnit size="200" header="Informations" position="east" collapsible="true" resizable="true">
+                <br/><br/>
+               
+                <i class="fa fa-github" style="font-size:36px;color:black"></i>
+                <i class="fa fa-git" style="font-size:36px; color: #AFAFAF"></i>
+
+
+                <a href="https://github.com/MalihehS"> Maliheh - GitHub  </a><br/>
+                <a href="https://github.com/toftan"> Emma - GitHub    </a><br/>
+                <a href="https://github.com/mariam0107"> Mariam - GitHub  </a><br/>
+                <a href="https://github.com/JuleCvet">Julijana - GitHub</a><br/>
+                <br/>
+                <i class="fa fa-linkedin-square" style="font-size:36px; color:#036fab ; display: block;"></i>   
+                <a href="https://www.linkedin.com/in/maliheh-saadatfard/"> Maliheh's LinkedIn</a><br/>
+                <a href="https://www.linkedin.com/in/emmatoft/"> Emma's LinkedIn  </a><br/>
+                <a href="https://www.linkedin.com/in/mariam-george-panicker/"> Mariam's LinkedIn</a><br/>
+                <a href="https://www.linkedin.com/in/julijana-cvetkovska-java-devel/">Julijana's LinkedIn</a><br/>
+
+
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="50">
+
+                <font color="black"> #All the information about cats coming from https://en.wikipedia.org/wiki/List_of_cat_breeds </font>
+
+            </p:layoutUnit>
+            <p:layoutUnit size="200" header="Menu" position="west" collapsible="true" resizable="true">
+                <br/><br/>
+                <h:form> 
+                     <i class="fa fa-hand-o-down" style="font-size:48px;color:#036fab "></i><br/><br/><br/>
+                     
+                     
+                    <h:commandButton value="Home     " action="index" class="home"/><br/><br/>
+                    <h:commandButton id="addMember" value="Registration  " action="addPage" class="home"/><br/><br/>
+                    <h:commandButton value="Delete a kitty" action="remove" class="home"/><br/><br/>
+                    <h:commandButton value="Update a kitty" action="updatePage" class="home"/><br/><br/>
+                    <h:commandButton value="Show one cat" action="showOne" class="home"/><br/><br/>
+                    <h:commandButton value="Show all" action="showAll" class="home"/><br/><br/>
+                  <h:commandButton value="Filter" action="filtering" class="home"/><br/><br/>
+
+                </h:form>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" styleClass="center">
+                <ui:insert name="content"/>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+
+

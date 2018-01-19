@@ -1,0 +1,156 @@
+
+#top {
+    position: relative;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+#bottom {
+    position: relative;
+    background-color: #c2dfef;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+    color: white;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+    color: black;
+    font-weight : bold;
+    text-decoration : underline;
+}
+
+
+
+.cat-right, .cat-left, .cat-north {
+    background-image:url("../images/bengal.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-color: aliceblue;
+}
+
+.ui-layout-unit{
+    color: aqua;
+    text-align: left;
+    font-size: large;
+}
+
+h3 {
+    text-align: left;
+    font-size:large; 
+
+}
+
+.center {
+    background-image: url("../images/persianCat.jpg");
+}
+.ui-widget-content {
+    background-color: transparent !important;
+    text-align: left;
+    font-size: inherit;
+    color:  aliceblue;
+
+}
+
+#top a:link, #top a:visited {
+  color: white;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+.center {
+    background-image: url("../images/persianCat.jpg");
+}
+
+.ui-widget-content {
+    text-align: center !important;
+    top: 6px;
+    font-style:  italic;
+   border-color: #045491;
+  
+}
+.home{
+    color: darkblue;
+    border: 1px solid activecaption;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+a:link, a:visited {
+    color: #045491;
+    border: 1px solid activecaption;
+    margin-top: 15px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color:  #036fab;
+    color: white;
+}
+
+.cat-right, .cat-left, .cat-north {
+    background-image:url("../images/bengal.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-color: aliceblue;
+}
+
+.ui-layout-unit{
+    color: aqua;
+    text-align: center !important;
+    font-size: large;
+}
+h3 {
+  text-align: left;
+  font-size: xx-large  
+    
+}

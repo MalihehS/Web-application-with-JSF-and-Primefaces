@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Pet Cat Care</title>
+        <h:outputStylesheet name="css/cssLayout.css" />
+        <style>               
+            .Bimage{background-image:url("resources/images/persian.jpg"); }        
+        </style> 
+    </h:head>
+    <h:body>
+        <ui:composition template="layout/newTemplate.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <h3>
+                        Please enter the Id of the cat you want to show:
+                    </h3>
+                    <h:panelGrid id="panel1" columns="3" >  
+
+                        <p:outputLabel for="showId" value="Id : "/>
+                        <p:inputText  id="showId" value="#{catController.showId}" />
+
+                        <p:commandButton id="show" value="information" action="#{catController.showOne1()}" update="panel"/>
+
+                    </h:panelGrid>
+                    <br/>
+
+                    <h:panelGrid id="panel" columns="2" > 
+                        <p:outputLabel for="name" value="Name :"/>
+                        <p:inputText id="name" value="#{catController.name}" />
+
+
+                        <p:outputLabel for="age" value="Age :"/>
+                        <p:inputText id="age" value="#{catController.age}"  />
+
+                        <p:outputLabel for="color" value="Color :"/>
+                        <p:inputText id="color" value="#{catController.color}" />
+
+                        <p:outputLabel for="ownerName" value="Owner name :"/>
+                        <p:inputText id="ownerName" value="#{catController.ownerName}" />
+                        
+                        <p:outputLabel for="type" value="Type :"/>
+                        <p:inputText id="type" value="#{catController.type}" />
+
+                        <p:outputLabel for="gender" value="Cat's gender:"/>
+
+                        <h:selectOneMenu id="gender" value="#{catController.gender}" required="true">
+
+                            <f:selectItem itemLabel="MALE" itemValue="MALE" />
+                            <f:selectItem itemLabel="FEMALE" itemValue="FEMALE" />
+                        </h:selectOneMenu>
+                   
+                        <h:panelGroup/>
+                    <p:commandButton value="Reset" action="#{catController.reset()}" update="panel,panel1" />
+                     </h:panelGrid>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
+

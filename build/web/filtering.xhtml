@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Pet Cat Care</title>
+        <h:outputStylesheet name="css/cssLayout.css" />
+        <style>               
+            .Bimage{background-image:url("resources/images/persianCat.jpg"); }        
+        </style> 
+    </h:head>
+
+    <h:body>
+        <ui:composition template="layout/newTemplate.xhtml">
+            <ui:define name="content">
+                <h:form>
+
+                <p:dataTable  id="dataTable" var="cate" value="#{catController.entirList}" 
+                              filteredValue="#{catController.filterCats}"
+                              widgetVar="catTable" 
+                              emptyMessage="No cats found with given informations" 
+                              rows="10"
+                              paginator="true"  paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink}  
+                              {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                              rowsPerPageTemplate="5,10,15" >
+                    
+                    <f:facet name="header">
+                    <p:outputPanel>
+                        <h:outputText value="sök:" />
+                        <p:inputText id="globalFilter" onkeyup="PF('catTable').filter()" style="width:150px; margin-left: 10px;" />
+                    </p:outputPanel>
+                </f:facet>
+                     
+                    <p:column headerText="Id" 
+                              filterBy="#{cate.id}" filterMatchMode="contains"  >
+                     
+
+                        <h:outputText id="Id" value="#{cate.id}" >
+                        </h:outputText>
+
+                    </p:column>
+                    <p:column headerText="Name"  filterBy="#{cate.name}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.name}" />
+                    </p:column>
+                    <p:column headerText="Gender" filterBy="#{cate.gender}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.gender}" />
+                    </p:column >
+                    <p:column headerText="Color" filterBy="#{cate.color}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.color}" />
+                    </p:column>
+                    <p:column headerText="Type" filterBy="#{cate.type}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.type}"  />
+                    </p:column>
+                    <p:column headerText="Age" filterBy="#{cate.age}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.age}"  />
+                    </p:column>
+                    <p:column headerText="Owner " filterBy="#{cate.name}" filterMatchMode="contains">
+                        <h:outputText value="#{cate.ownerName}" />
+                    </p:column>
+
+                </p:dataTable>
+               
+</h:form>
+            </ui:define> 
+        </ui:composition>
+    </h:body>
+</html>
+
